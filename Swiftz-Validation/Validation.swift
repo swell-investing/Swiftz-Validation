@@ -89,9 +89,9 @@ extension Validation /*: ApplicativeOps*/ {
 
 extension Validation where L:Concatable/*: Semigroup*/ {
     
-    typealias FA = Validation<L,A>
+    public typealias FA = Validation<L,A>
     
-    func sconcat(_ other : FA) -> FA {
+    public func sconcat(_ other : FA) -> FA {
         switch self {
         case .Success( _):
             return other
